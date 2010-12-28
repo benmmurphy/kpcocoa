@@ -277,6 +277,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KeepassCocoa_Prefix.pch;
+				HEADER_SEARCH_PATHS = KeePassLib;
 				INFOPLIST_FILE = "KeepassCocoa-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = KeepassCocoa;
