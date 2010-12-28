@@ -41,4 +41,5 @@
 @property (assign) IBOutlet NSTextField *url;
 @property (assign) IBOutlet NSTextField *masterPassword;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
+- (id<KdbEntry>) selectedEntry;
 @end

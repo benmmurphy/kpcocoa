@@ -1,4 +1,3 @@
-//
 //  KeepassCocoaAppDelegate.m
 //  KeepassCocoa
 //
@@ -24,6 +23,7 @@
 @synthesize url;
 @synthesize masterPassword;
 @synthesize notes;
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
@@ -133,13 +133,11 @@
 }
 
 - (void)edit: (id) sender {
-	int row = [entries selectedRow];
-	NSArray* allEntries = [selectedGroup getEntries];
-	if (row < 0 || row >= [allEntries count]) {
-		return;
-	}
 	
-	id<KdbEntry> entry = [allEntries objectAtIndex: row];
+	id<KdbEntry> entry = [self selectedEntry];
+        if (entry == nil) {
+          return;
+        }
 	
 	[self bindValue: entry sel: @selector(getEntryName) field: title];
 	[self bindValue: entry sel: @selector(getUserName) field: username];
@@ -156,13 +154,10 @@
 
 
 - (void)copyEntry: (SEL) field {
-	int row = [entries selectedRow];
-	NSArray* allEntries = [selectedGroup getEntries];
-	if (row < 0 || row >= [allEntries count]) {
-		return;
-	}
-	
-	id<KdbEntry> entry = [allEntries objectAtIndex: row];
+	id<KdbEntry> entry = [self selectedEntry];
+        if (entry == nil) {
+          return;
+        }
 	NSPasteboard* pasteBoard = [NSPasteboard generalPasteboard];
 	[pasteBoard declareTypes: [NSArray arrayWithObject: NSStringPboardType] owner: nil];
 	[pasteBoard setString: [entry performSelector: field] forType: NSStringPboardType];
@@ -213,27 +208,43 @@
 	[NSApp stopModal];
 }
 
+- (NSArray*) currentArray {
+  if (searchResults != nil) {
+    return searchResults;
+  } else if (selectedGroup != nil) {
+    return [selectedGroup getEntries];
+  } else {
+    return nil;
+  }
+}
 
+- (id<KdbEntry>) selectedEntry {
+  int row = [entries selectedRow];
+  NSArray* allEntries = [self currentArray];
+  if (row < 0 || row >= [allEntries count]) {
+    return nil;
+  }
+  return [allEntries objectAtIndex: row];
+
+}
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
-	if (searchResults != nil) {
-		return [searchResults count];
-	} else if (selectedGroup == nil) {
-		return 0;
-	} else {
-		return [[selectedGroup getEntries] count];
-	}
+        NSArray* currentArray = [self currentArray];
+        if (currentArray == nil) {
+          return 0;
+        } else {
+          return [currentArray count];
+        }
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex {
 	id<KdbEntry> entry;
-	if (searchResults != nil) {
-		entry = [searchResults objectAtIndex: rowIndex];
-	} else if (selectedGroup == nil) {
-		return nil;
-	} else {
-		entry = [[selectedGroup getEntries] objectAtIndex: rowIndex];
-	}
+        NSArray* currentArray = [self currentArray];
+        if (currentArray == nil) {
+          return nil;
+        } else {
+          entry = [currentArray objectAtIndex: rowIndex];
+        }
 	
 
 	if ([[aTableColumn identifier] isEqual: @"title"]) {
