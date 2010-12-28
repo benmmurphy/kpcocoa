@@ -1,0 +1,3 @@
+[submodule "KeePassLib"]
+	path = KeePassLib
+	url = https://github.com/mykeepass/KeePassLib.git

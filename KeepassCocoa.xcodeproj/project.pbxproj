@@ -12,24 +12,24 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		B508EAD312358CD200A9C01B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B508EAD212358CD200A9C01B /* MainMenu.xib */; };
-		B508EC001236AEB800A9C01B /* libKeePass2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B508EAB412358C3C00A9C01B /* libKeePass2.a */; };
 		B508EC611236B23B00A9C01B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B508EC601236B23B00A9C01B /* libz.dylib */; };
 		B508EC691236B25900A9C01B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B508EC681236B25900A9C01B /* libxml2.dylib */; };
+		B5F9C2F712CA3FB6005E7D97 /* libKeePass2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F9C2F412CA3FB1005E7D97 /* libKeePass2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B508EAB312358C3C00A9C01B /* PBXContainerItemProxy */ = {
+		B5F9C2F312CA3FB1005E7D97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B508EAAE12358C3C00A9C01B /* KeePass2.xcodeproj */;
+			containerPortal = B5F9C2E912CA3FB1005E7D97 /* KeePass2.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libKeePass2.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = KeePass2;
 		};
-		B508EAB512358C3C00A9C01B /* PBXContainerItemProxy */ = {
+		B5F9C2F512CA3FB1005E7D97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B508EAAE12358C3C00A9C01B /* KeePass2.xcodeproj */;
+			containerPortal = B5F9C2E912CA3FB1005E7D97 /* KeePass2.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = F77A181110EEB3E9007F47FF /* LogicTests.octest */;
+			remoteGlobalIDString = F77A181110EEB3E9007F47FF;
 			remoteInfo = LogicTests;
 		};
 /* End PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* KeepassCocoa-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "KeepassCocoa-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* KeepassCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepassCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B508EAAE12358C3C00A9C01B /* KeePass2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeePass2.xcodeproj; path = ../KeePassLib/KeePass2.xcodeproj; sourceTree = SOURCE_ROOT; };
 		B508EAD212358CD200A9C01B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		B508EC601236B23B00A9C01B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B508EC681236B25900A9C01B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B5F9C2E912CA3FB1005E7D97 /* KeePass2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeePass2.xcodeproj; path = KeePassLib/KeePass2.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +58,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				B508EC001236AEB800A9C01B /* libKeePass2.a in Frameworks */,
 				B508EC611236B23B00A9C01B /* libz.dylib in Frameworks */,
 				B508EC691236B25900A9C01B /* libxml2.dylib in Frameworks */,
+				B5F9C2F712CA3FB6005E7D97 /* libKeePass2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 		29B97314FDCFA39411CA2CEA /* KeepassCocoa */ = {
 			isa = PBXGroup;
 			children = (
-				B508EAAE12358C3C00A9C01B /* KeePass2.xcodeproj */,
+				B5F9C2E912CA3FB1005E7D97 /* KeePass2.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -145,11 +145,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B508EAAF12358C3C00A9C01B /* Products */ = {
+		B5F9C2EF12CA3FB1005E7D97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B508EAB412358C3C00A9C01B /* libKeePass2.a */,
-				B508EAB612358C3C00A9C01B /* LogicTests.octest */,
+				B5F9C2F412CA3FB1005E7D97 /* libKeePass2.a */,
+				B5F9C2F612CA3FB1005E7D97 /* LogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B508EAAF12358C3C00A9C01B /* Products */;
-					ProjectRef = B508EAAE12358C3C00A9C01B /* KeePass2.xcodeproj */;
+					ProductGroup = B5F9C2EF12CA3FB1005E7D97 /* Products */;
+					ProjectRef = B5F9C2E912CA3FB1005E7D97 /* KeePass2.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -199,18 +199,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B508EAB412358C3C00A9C01B /* libKeePass2.a */ = {
+		B5F9C2F412CA3FB1005E7D97 /* libKeePass2.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libKeePass2.a;
-			remoteRef = B508EAB312358C3C00A9C01B /* PBXContainerItemProxy */;
+			remoteRef = B5F9C2F312CA3FB1005E7D97 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B508EAB612358C3C00A9C01B /* LogicTests.octest */ = {
+		B5F9C2F612CA3FB1005E7D97 /* LogicTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = LogicTests.octest;
-			remoteRef = B508EAB512358C3C00A9C01B /* PBXContainerItemProxy */;
+			remoteRef = B5F9C2F512CA3FB1005E7D97 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -262,7 +262,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KeepassCocoa_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../KeePassLib;
+				HEADER_SEARCH_PATHS = KeePassLib;
 				INFOPLIST_FILE = "KeepassCocoa-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = KeepassCocoa;
